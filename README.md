@@ -30,7 +30,7 @@ Dependencias incluidas en el proyecto:
   - react-icons "utilizado para icono del carrito"
 
 
-## Ejecturas los siguientes comandos dentro del directorio luego de realizar el clon
+## Ejecturar los siguientes comandos dentro del directorio luego de realizar el clon
 
 ```
   - npm install
