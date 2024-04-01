@@ -26,7 +26,7 @@ Dependencias incluidas en el proyecto:
 
   - react
   - react-dom
-  - react-icons
+  - react-icons "utilizado para icono del carrito"
 
 
 ## Ejecturas los siguientes comandos dentro del directorio luego de realizar el clon
