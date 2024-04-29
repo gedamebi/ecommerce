@@ -1,43 +1,82 @@
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
+import { Link, NavLink, useNavigate } from 'react-router-dom'
+
 import CartWidget from '../CartWidget/CartWidget';
 import logo from './assets/logo.jpg';
 
-const NavBar = () => {
+import {useState, useEffect } from 'react';
+
+function NavBar () {
+
+    const [categorys, setCategorys] = useState([])
+
+    const [showMenu, setShowMenu] = useState(false);
+
+    const handleToggle = () => {
+      setShowMenu(!showMenu); // Invierte el estado actual de showMenu
+    };
+
+    const handleLinkClick = () => {
+      setShowMenu(false); // Oculta el NavDropdown cuando se hace clic en un Link
+    };
+
+    useEffect(() => {
+      fetch('http://localhost/category.php')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Error al cargar los datos');
+        }
+        return response.json();
+      })
+      .then(data => {
+        setCategorys(data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+
+    }, [])
+
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#"><img src={logo} alt="logo" /></a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Sobre Nosotros</a>
-              </li>
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Productos
-                </a>
-                <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Tratamiento de agua</a></li>
-                  <li><a className="dropdown-item" href="#">Electricidad</a></li>
-                  <li><a className="dropdown-item" href="#">Automatizaci&oacute;n</a></li>
-                  <li><hr className="dropdown-divider" /></li>
-                  <li><a className="dropdown-item" href="#">Servicios</a></li>
-                </ul>
-              </li>
-            </ul>
-            <form className="d-flex" role="search">
-              <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar"/>
-              <button className="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
+      <Navbar expand="lg" className="bg-body-tertiary">
+        <Container fluid>
+          <Navbar.Brand><img src={logo} alt="logo" /></Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Collapse id="navbarScroll">
+            <Nav
+              className="me-auto my-2 my-lg-0"
+              style={{ maxHeight: '100px' }}
+              navbarScroll
+            >
+              <NavLink to="/" className="nav-link" onClick={handleLinkClick}>Home</NavLink>
+              <NavLink to="/sobreNosotros" className="nav-link" onClick={handleLinkClick}>Sobre Nosotros</NavLink>
+              <NavDropdown show={showMenu} title="Productos" id="navbarScrollingDropdown" onClick={handleToggle}>
+
+                {categorys.map(category => (
+                  <Link className="nav-link" to={`/category/${category.id}`} key={category.id} onClick={handleLinkClick}>{category.name}</Link>
+                ))}
+                
+              </NavDropdown>
+            </Nav>
+            <Form className="d-flex">
+              <Form.Control
+                type="search"
+                placeholder="Search"
+                className="me-2"
+                aria-label="Search"
+              />
+              <Button variant="outline-success">Search</Button>
+            </Form>
             <CartWidget />
-          </div>
-        </div>
-      </nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     )
 }
 

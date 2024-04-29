@@ -1,9 +1,42 @@
+import Row from 'react-bootstrap/Row'
+import Container from 'react-bootstrap/Container'
+import ItemList from '../ItemList/ItemList'
 
-const ItemListContainer = ({greeting}) => {
+import { useState, useEffect } from 'react'
+
+import { useParams } from 'react-router-dom'
+
+function ItemListContainer () {
+
+    const [productos, setProductos] = useState([])
+
+    const { categoryId } = useParams()
+
+    useEffect(() => {
+        fetch('http://localhost/api/producto.php')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Error al cargar los datos');
+          }
+          return response.json();
+        })
+        .then(data => {
+          // Filtro en el array de productos solo los que estan en la categoria seleccionada
+          data = data.filter(item => item.categoryId == categoryId);
+          setProductos(data);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+  
+    }, [ categoryId ])
+
     return(
-        <div style={{marginTop:'25px'}}>
-            <h1>{greeting}</h1>
-        </div>
+        <Container fluid>
+            <Row style={{marginTop: "20px"}}>
+                <ItemList productos={productos} />
+            </Row>
+        </Container>
     )
 }
 

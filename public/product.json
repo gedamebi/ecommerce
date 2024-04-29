@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "categoryId": "1",
+        "name": "Filtro de carbono",
+        "price": 30,
+        "img": "https://"
+    },
+    {
+        "id": 2,
+        "categoryId": "1",
+        "name": "Porta filtros",
+        "price": 30,
+        "img": "https://"
+    },
+    {
+        "id": 3,
+        "categoryId": "1",
+        "name": "Cloro",
+        "price": 30,
+        "img": "https://"
+    },
+    {
+        "id": 4,
+        "categoryId": "1",
+        "name": "Generador de ozono",
+        "price": 30,
+        "img": "https://"
+    },
+    {
+        "id": 4,
+        "categoryId": "1",
+        "name": "Medidor de cloro",
+        "price": 30,
+        "img": "https://"
+    },
+    {
+        "id": 5,
+        "categoryId": "2",
+        "name": "Dispensadores de agua",
+        "price": 30,
+        "img": "https://"
+    },
+    {
+        "id": 5,
+        "categoryId": "1",
+        "name": "Bomba presurizadora domestica",
+        "price": 30,
+        "img": "https://"
+    },
+    {
+        "id": 5,
+        "categoryId": "1",
+        "name": "Canilla con filtro",
+        "price": 30,
+        "img": "https://"
+    }
+]
