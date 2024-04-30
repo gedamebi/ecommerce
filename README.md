@@ -28,6 +28,8 @@ Dependencias incluidas en el proyecto:
   - react
   - react-dom
   - react-icons "utilizado para icono del carrito"
+  - react-bootstrap
+  - react-router-dom
 
 
 ## Ejecturar los siguientes comandos dentro del directorio luego de realizar el clon
@@ -37,15 +39,6 @@ Dependencias incluidas en el proyecto:
   - npm run dev
 ```
 
-<br><br>
-
-## NOTA
-
-```
-  Investigando vi que los vinculos en react se crean con una etiqueta llamado Link del paquete react-router-dom
-  pero entiendo que no es parte de la consigna por lo que deje los vinculos asi como lo saque del DOC de boostrap
-  sustituyendo solo class por className para que se pudiera aplicar los estilos.
-```
 <br><br>
 
 ---
