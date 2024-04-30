@@ -1,0 +1,23 @@
+
+.nameProduct {
+    margin-top: 25px;
+}
+
+
+.imgProduct {
+    margin-top: 25px;
+}
+
+.priceProduct {
+    font-family : "sans-serif 18px";
+    font-weight : bold;
+    color : red;
+    margin-top : 30px;
+    text-align: center;
+}
+
+.detailProduct {
+    text-align : left;
+    margin-top : 30px;
+}
+

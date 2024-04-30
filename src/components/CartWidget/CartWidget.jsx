@@ -1,4 +1,5 @@
 import { BsCart } from '../../../node_modules/react-icons/bs'; 
+import './CartWidget.css';
 
 
 const CartWidget = () => {
@@ -7,13 +8,9 @@ const CartWidget = () => {
     
     return(
         <div>
-            <button style={{
-                        backgroundColor: 'grey', 
-                        marginLeft: '6px'
-                    }}
-            >
+            <button className='buttonCartWidget'>
                 <BsCart />
-                <span style={{marginLeft: '6px'}}>{contadorCarrito}</span>
+                <span className='counterCartWidget'>{contadorCarrito}</span>
             </button>
         </div>
     )

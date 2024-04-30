@@ -13,7 +13,7 @@ function ItemListContainer () {
     const { categoryId } = useParams()
 
     useEffect(() => {
-        fetch('http://localhost/api/producto.php')
+        fetch('https://www.macrum.com.uy/api/producto.php')
         .then(response => {
           if (!response.ok) {
             throw new Error('Error al cargar los datos');
@@ -22,7 +22,10 @@ function ItemListContainer () {
         })
         .then(data => {
           // Filtro en el array de productos solo los que estan en la categoria seleccionada
-          data = data.filter(item => item.categoryId == categoryId);
+          // Use el ID 0 como codigo para mostrar todos los productos sin filtrar 
+          if (categoryId != 0){
+            data = data.filter(item => item.categoryId == categoryId);
+          }
           setProductos(data);
         })
         .catch(error => {

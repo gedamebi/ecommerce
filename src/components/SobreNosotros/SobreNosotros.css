@@ -1,33 +1,37 @@
 
 /* Estilos para las secciones que tiene clase textMisionVision */
-#sobreNosotros {
+.sobreNosotros {
     margin-top: 30px; 
 }
 
-#sobreNosotros p {
+.sobreNosotros p {
     text-align: left; 
 }
 
-#areaElectricaySoftware {
+.areaElectricaySoftware {
     margin-top: 30px; 
 }
   
-#areaElectricaySoftware h2 {
+.areaElectricaySoftware h2 {
     font-weight: bold; 
 }
 
-#areaElectricaySoftware p {
+.areaElectricaySoftware p {
     text-align: left; 
 }
   
-#areaTratamientoDeAgua {
+.areaTratamientoDeAgua {
     margin-top: 30px; 
 }
   
-#areaTratamientoDeAgua h2 {
+.areaTratamientoDeAgua h2 {
     font-weight: bold; 
 }
 
-#areaTratamientoDeAgua p {
+.areaTratamientoDeAgua p {
     text-align: left; 
+}
+
+.introduccion{
+    text-align: left;
 }

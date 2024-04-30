@@ -27,7 +27,7 @@ function NavBar () {
     };
 
     useEffect(() => {
-      fetch('http://localhost/category.php')
+      fetch('https://www.macrum.com.uy/api/category.php')
       .then(response => {
         if (!response.ok) {
           throw new Error('Error al cargar los datos');
