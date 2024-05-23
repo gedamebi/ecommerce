@@ -1,16 +1,16 @@
-import { BsCart } from '../../../node_modules/react-icons/bs'; 
-import './CartWidget.css';
-
+import { BsCart } from '../../../node_modules/react-icons/bs'
+import './CartWidget.css'
+import { useCart } from '../../context/cartContext'
 
 const CartWidget = () => {
 
-    let contadorCarrito = 0
-    
+    const { cart } = useCart()
+
     return(
         <div>
             <button className='buttonCartWidget'>
                 <BsCart />
-                <span className='counterCartWidget'>{contadorCarrito}</span>
+                <span className='counterCartWidget'>{cart.length}</span>
             </button>
         </div>
     )

@@ -14,7 +14,7 @@
     width: auto;
     padding: 12px;
     font-size: 8px;
-    background: #f53030;
+    background: #0d6efd;
     border-radius: 8px;
     display: flex;
     align-self: center;
@@ -27,6 +27,19 @@
     cursor: pointer;
     outline: inherit;
     font-size: larger;
+}
+
+.StyleButton:active {
+    /* background: #2980b9; */
+    border: 1px solid;
+}
+
+.addToCart {
+    border: 0;
+}
+
+.addToCart:active {
+    border: 1px solid;
 }
 
 .Number {

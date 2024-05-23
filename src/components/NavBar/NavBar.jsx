@@ -11,8 +11,11 @@ import CartWidget from '../CartWidget/CartWidget';
 import logo from './assets/logo.jpg';
 
 import {useState, useEffect } from 'react';
+import { getCategorys } from '../../firebase/db'
 
 function NavBar () {
+
+    const navigation = useNavigate()
 
     const [categorys, setCategorys] = useState([])
 
@@ -27,20 +30,12 @@ function NavBar () {
     };
 
     useEffect(() => {
-      fetch('https://www.macrum.com.uy/api/category.php')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Error al cargar los datos');
-        }
-        return response.json();
-      })
-      .then(data => {
-        setCategorys(data);
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
+      const getCategorysDB = async () => {
+        let data = await getCategorys()
+        setCategorys(data)
+      }
 
+      getCategorysDB()
     }, [])
 
     return (
@@ -73,7 +68,10 @@ function NavBar () {
               />
               <Button variant="outline-success">Search</Button>
             </Form>
-            <CartWidget />
+            <span onClick={()=>navigation('/cart')}>
+              <CartWidget />
+            </span>
+            
           </Navbar.Collapse>
         </Container>
       </Navbar>
