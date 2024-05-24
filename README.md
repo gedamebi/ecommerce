@@ -1,4 +1,7 @@
 <h1 align="center">Curso React</h1><br><br>
+## Descripción 
+Macrum Ecommerce es una web donde podras ver el catalogo de productos con lo que trabajamos y podras comprar desde ahi, para poder brinarle un rapido procedamiento a los pedidos de nuestro cliente. proximamente le agregaremos mas funcionalidades al sitio
+***
 <br>
 <h2 align="center">Lenguaje y Herramientas</h2>
 <br><br>
@@ -16,7 +19,18 @@
 </p>
 <br><br>
 
+## Funcionalidades de la web
 
+- Interfaz de usuario intuitiva para recorrer todas las funcionalidades de la aplicacion.
+
+- Notificacion por medio de toastify y sweetalert2.
+
+- Completo catalogo de productos con la posibilidad de filtrar por tipo.
+
+- Integración con un carrito de compras.
+
+- Una vez finalizada la compra le llegara un correo con el resumen de la orden.
+***
 
 ---
 <br><br>
