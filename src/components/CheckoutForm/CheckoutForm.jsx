@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { useNotification } from '../../notification/NotificationService'
 import emailjs from '@emailjs/browser'
 import FadeLoader  from 'react-spinners/FadeLoader'
+import { Timestamp } from 'firebase/firestore'
 
 const CheckoutForm = () => {
     const { cart, getTotal, clearCart } = useCart()
@@ -29,7 +30,8 @@ const CheckoutForm = () => {
             const objOrder = {
                 buyer: user,
                 items: cart,
-                total: getTotal()
+                total: getTotal(),
+                createdAt: Timestamp.now()
             }
     
             const {orderAdded , outOfStock } = await createOrder(objOrder)  

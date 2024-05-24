@@ -1,4 +1,4 @@
-import { getFirestore , collection, query, doc, getDocs, getDoc, addDoc, where , documentId , writeBatch, Timestamp  } from 'firebase/firestore'
+import { getFirestore , collection, query, doc, getDocs, getDoc, addDoc, where , documentId , writeBatch } from 'firebase/firestore'
 import { app } from './config.js'
 
 
@@ -57,8 +57,7 @@ export const createOrder = async (objOrder) => {
         batch.commit()
         const ordersRef = collection(db,'orders')
         orderAdded = await addDoc(ordersRef, {
-            data: objOrder,
-            createdAt: Timestamp.now()
+            data: objOrder
         })
     }
     return { orderAdded, outOfStock}
