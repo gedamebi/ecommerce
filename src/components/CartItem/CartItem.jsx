@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom'
-import { useNotification } from '../../notification/NotificationService'
+import { useNotification } from '../../context/Notification/notificationContext'
 
 const CartItem = ({ product, onRemove}) => {
 

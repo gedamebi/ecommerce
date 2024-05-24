@@ -12,13 +12,11 @@ export default function CartProvider ({ children }) {
     }
 
     const getTotal = () => {
-
         let total = 0
         cart.forEach(prod => {
             total += prod.quantity * prod.producto.price
         })
         return total
-
     }
 
     const clearCart = () => {

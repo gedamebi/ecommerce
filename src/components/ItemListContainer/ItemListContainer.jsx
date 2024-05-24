@@ -50,8 +50,7 @@ const ItemListContainer = () => {
             <Row style={{marginTop: '20px'}}>
                 <ItemList productos={productos} />
             </Row>
-          )}
-            
+          )}       
         </Container>
     )
 }

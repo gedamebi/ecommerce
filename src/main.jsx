@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import CartProvider from './context/CartProvider.jsx'
-import { NotificationProvider } from './notification/NotificationService';
+import CartProvider from './context/Cart/CartProvider.jsx'
+import NotificationProvider from './context/Notification/notificationProvider.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -12,5 +12,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <App />
       </CartProvider>
     </NotificationProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 )
