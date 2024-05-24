@@ -21,7 +21,7 @@
 ---
 <br><br>
 
-# Pre entrega 1 curso React (Germán Medina)
+# Proyecto final curso React (Germán Medina)
 
 Dependencias incluidas en el proyecto:
 
@@ -30,6 +30,11 @@ Dependencias incluidas en el proyecto:
   - react-icons "utilizado para icono del carrito"
   - react-bootstrap
   - react-router-dom
+  - [react-spinners](https://www.davidhu.io/react-spinners/)
+  - [react-toastify](https://fkhadra.github.io/react-toastify/introduction/)
+  - [sweetalert2](https://sweetalert2.github.io/)
+  - [@emailjs/browser](https://www.emailjs.com/docs/)
+  - [firebase](https://firebase.google.com/docs)
 
 
 ## Ejecturar los siguientes comandos dentro del directorio luego de realizar el clon

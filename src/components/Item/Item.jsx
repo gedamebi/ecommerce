@@ -3,14 +3,13 @@ import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom'
 
 
-function Item ({ producto }) {
-
+const Item = ({ producto }) => {
     return (
         <Col lg={3} style={{ marginBottom: '25px' }} >
-            <Card className="h-100" style={{width: '18 rem'}} >
+            <Card className='h-100' style={{width: '18 rem'}} >
                 <Card.Img variant='top' src={producto.img} />
                 <Card.Body>
                     <Card.Title>{producto.name}</Card.Title>

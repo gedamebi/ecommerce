@@ -1,9 +1,9 @@
-import "./SobreNosotros.css"
+import './SobreNosotros.css'
 
 const SobreNosotros = () => {
     return(
         <div style={{marginTop:'25px'}}>
-            <div className="sobreNosotros">
+            <div className='sobreNosotros'>
                 <h1>Sobre Nosotros</h1>
                 <p>
                     Macrum S.R.L es una empresa joven pero con una amplia experiencia de sus socios en el campo de la ingen&iacute;eria el&eacute;ctrica industrial y los tratamientos de agua.<br />
@@ -11,9 +11,9 @@ const SobreNosotros = () => {
                     Contamos con un equipo altamente capacitado en la seguridad industrial y cuidado del medio ambiente, capacitando de forma continua a nuestro personal.
                 </p>
             </div>
-            <div className="areaElectricaySoftware">
+            <div className='areaElectricaySoftware'>
                 <h2>&Aacute;rea Electrica y Software</h2>
-                <div className="introduccion">
+                <div className='introduccion'>
                     <b>En el &aacute;rea el&eacute;ctrica</b> trabajamos en baja tensi&oacute;n con corte visible y consignaci&oacute;n de equipos de forma de asegurar la operaci&oacute;n.
                     Entre los trabajos que realizamos se encuentran:
                     <ul>
@@ -26,9 +26,9 @@ const SobreNosotros = () => {
                     </ul>  
                 </div>
             </div>
-            <div className="areaTratamientoDeAgua">
+            <div className='areaTratamientoDeAgua'>
                 <h2>&Aacute;rea Tratamiento de Agua</h2>
-                <div className="introduccion">
+                <div className='introduccion'>
                     <b>En el &aacute;rea de tratamiento de agua</b> trabajamos principalmente en la provisi&oacute;n de agua con la calidad estandarizada que su proceso requiera, ya sea en centros de di&aacute;lisis, laboratorios o industrias.<br/>
                     Nos encargamos del dise&ntilde;o, instalaci&oacute;n y mantenimiento de tratamiento de agua que necesite.<br />
                     Algunos de los sistemas y equipos que instalamos son:<br />

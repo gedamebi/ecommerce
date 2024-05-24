@@ -1,6 +1,6 @@
 import Item from '../Item/Item'
 
-function ItemList ({ productos }) {
+const ItemList = ({ productos }) => {
     return (
         <>
             {

@@ -7,7 +7,6 @@ export default function CartProvider ({ children }) {
     const addToCart = product => setCart([...cart, product])
 
     const removeItem = (id) => {
-        console.log(id)
         const updatedCart = cart.filter(prod => prod.producto.id !== id)
         setCart(updatedCart)
     }
@@ -26,8 +25,12 @@ export default function CartProvider ({ children }) {
         setCart([])
     }
 
+    const isInCart = (id) => {
+        return cart.some(prod => prod.producto.id === id)
+    }
+
     return (
-        <cartContext.Provider value={{cart, addToCart, removeItem, getTotal, clearCart}}>
+        <cartContext.Provider value={{cart, addToCart, removeItem, getTotal, clearCart, isInCart}}>
             {children}
         </cartContext.Provider>
     )
