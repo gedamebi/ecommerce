@@ -42,11 +42,11 @@ Macrum Ecommerce es una web donde podras ver el catalogo de productos con lo que
 
 Dependencias incluidas en el proyecto:
 
-  - react
-  - react-dom
-  - react-icons "utilizado para icono del carrito"
-  - react-bootstrap
-  - react-router-dom
+  - [react](https://es.react.dev/)
+  - [react-dom](https://es.legacy.reactjs.org/docs/react-dom.html)
+  - [react-icons](https://react-icons.github.io/react-icons/) "utilizado para icono del carrito"
+  - [react-bootstrap](https://react-bootstrap.netlify.app/)
+  - [react-router-dom](https://reactrouter.com/en/main)
   - [react-spinners](https://www.davidhu.io/react-spinners/)
   - [react-toastify](https://fkhadra.github.io/react-toastify/introduction/)
   - [sweetalert2](https://sweetalert2.github.io/)
