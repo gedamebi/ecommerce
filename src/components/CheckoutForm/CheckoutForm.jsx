@@ -103,7 +103,7 @@ const CheckoutForm = () => {
                     />
                 </div>
             ) : (
-                <form className='d-flex p-2 flex-column align-items-center align-content-center g-3 needs-validation' noValidate onSubmit={handleSubmit}>
+                <form className='d-flex p-2 flex-column align-items-center align-content-center g-3' onSubmit={handleSubmit}>
                     <div className='col-md-3'>
                         <label htmlFor='validationCustom01' className='form-label'>Nombre</label>
                         <input type='text' className='form-control' id='validationCustom01' value={user.nombre} onChange={(e)=>setUser({...user,nombre: e.target.value})} required></input>

@@ -63,6 +63,15 @@ Dependencias incluidas en el proyecto:
 
 <br><br>
 
+***
+## Si quieres probarla en produccion dejo aqui el Deploy en Vercel:
+
+[Deploy](https://ecommerce-one-brown.vercel.app/)
+
+***
+
+
+
 ---
 ### Autor: Germán Medina
 ---

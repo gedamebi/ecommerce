@@ -19,7 +19,7 @@ const Cart = () => {
                 ) : (
                     <div>
                         <p className='total'><b>TOTAL: $ {getTotal()}</b></p>
-                        <Link className='btn btn-outline-info btn-lg w-100 m-3' to='/CheckoutForm'>Checkout</Link>
+                        <Link className='btn btn-outline-info w-50 m-3 btnCheckout' to='/CheckoutForm'>Checkout</Link>
                     </div>
                 )
             }             
