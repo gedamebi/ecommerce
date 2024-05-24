@@ -56,9 +56,7 @@ export const createOrder = async (objOrder) => {
     if(outOfStock.length ===  0){
         batch.commit()
         const ordersRef = collection(db,'orders')
-        orderAdded = await addDoc(ordersRef, {
-            data: objOrder
-        })
+        orderAdded = await addDoc(ordersRef, objOrder)
     }
     return { orderAdded, outOfStock}
 }
