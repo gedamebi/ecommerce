@@ -18,7 +18,7 @@ Macrum Ecommerce es una web donde podras ver el catalogo de productos con lo que
     <a href="https://es.react.dev/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" width="90" height="90"/></a>
     <a href="https://vitejs.dev/guide/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vite/vite-original-wordmark.svg" alt="Vite" width="90" height="90"/></a>
     <a href="https://www.npmjs.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg" alt="npm" width="90" height="90"/></a>
-    <a href="https://firebase.google.com/docs" target="_blank"> <img src="https://raw.githubusercontent.com/devicon/blob/master/icons/firebase/firebase-original.svg" alt="npm" width="90" height="90"/></a>
+    <a href="https://firebase.google.com/docs" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-original.svg" alt="firbase" width="90" height="90"/></a>
 </p>
 <br><br>
 
