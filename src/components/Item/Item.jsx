@@ -5,10 +5,9 @@ import Col from 'react-bootstrap/Col'
 
 import { Link } from 'react-router-dom'
 
-
 const Item = ({ producto }) => {
     return (
-        <Col lg={3} style={{ marginBottom: '25px' }} >
+        <Col lg={3} style={{marginBottom: '25px' }} >
             <Card className='h-100' style={{width: '18 rem'}} >
                 <Card.Img variant='top' src={producto.img} />
                 <Card.Body>
